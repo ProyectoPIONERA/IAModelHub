@@ -1,4 +1,4 @@
-# IAModelHub
+# AIModelHub
 
 AI model management platform with an EDC-style runtime in Node.js and an Angular frontend to explore, register, and operate IA assets with S3 storage and rich metadata.
 
@@ -27,14 +27,14 @@ First functional delivery of the AI model lifecycle for data spaces: it already 
 ## Repository structure
 
 ```
-IAModelHub/
+AIModelHub/
 ├── deploy.sh                       # Automated deployment
-├── IAModelHub_Extensiones/         # Logic and services (symlinks keep previous paths)
+├── AIModelHub_Extensiones/         # Logic and services (symlinks keep previous paths)
 │   ├── runtime-edc-backend/        # EDC backend + API (symlink: backend)
 │   ├── database-scripts/           # SQL init/backup (symlink: database)
 │   ├── model-serving/              # Model HTTP server (symlink: model-server)
 │   └── infra-docker/               # Docker Compose (symlink: docker-compose.yml)
-├── IAModelHub_EDCUI/               # Interfaces
+├── AIModelHub_EDCUI/               # Interfaces
 │   └── ui-model-browser/           # Angular UI (symlink: ml-browser-app)
 ├── DEPLOYMENT.md
 └── README.md
@@ -50,14 +50,14 @@ IAModelHub/
 
 ```bash
 # 1) Enter the project
-cd IAModelHub
+cd AIModelHub
 
 # 2) Automated deployment (requires Docker permissions)
 ./deploy.sh
 
 # 3) Manual (equivalent result to ./deploy.sh)
 # Infrastructure (PostgreSQL + MinIO)
-cd IAModelHub_Extensiones
+cd AIModelHub_Extensiones
 docker compose up -d
 
 # Backend
@@ -66,7 +66,7 @@ npm install
 nohup node src/server-edc.js > ../../backend.log 2>&1 &
 
 # Frontend
-cd ../../IAModelHub_EDCUI/ui-model-browser
+cd ../../AIModelHub_EDCUI/ui-model-browser
 npm install
 nohup npm run start > ../../frontend.log 2>&1 &
 

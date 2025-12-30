@@ -9,14 +9,14 @@ Simple HTTP server to expose locally stored ML models through authenticated endp
 
 ## Installation
 ```bash
-cd IAModelHub/IAModelHub_Extensiones/model-serving
+cd AIModelHub/AIModelHub_Extensiones/model-serving
 pip install -r requirements.txt
 ```
 
 ## Configuration
 Edit `model_http_server.py`:
 ```python
-MODEL_BASE_PATH = '/home/edmundo/IAModelHub/IAModelHub_Extensiones/model-serving/models'  # model directory
+MODEL_BASE_PATH = '/home/edmundo/AIModelHub/AIModelHub_Extensiones/model-serving/models'  # model directory
 API_KEY = 'ml-model-key-2024'  # change to a secure value
 AVAILABLE_MODELS = {
     'iris_classifier': {

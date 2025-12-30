@@ -48,7 +48,7 @@ Standalone Angular 17 component to explore, manage, and create Machine Learning 
 ## 🚀 Installation
 
 ```bash
-cd IAModelHub/IAModelHub_EDCUI/ml-browser-app
+cd AIModelHub/AIModelHub_EDCUI/ml-browser-app
 npm install
 ```
 

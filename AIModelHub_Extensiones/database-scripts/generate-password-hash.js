@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Password Hash Generator for IAModelHub (CatalogModelIA_DS reorganized)
+ * Password Hash Generator for AIModelHub (CatalogModelIA_DS reorganized)
  * 
  * This utility generates bcrypt password hashes for user accounts.
  * Use this when creating new users or changing passwords.
@@ -75,7 +75,7 @@ async function verifyHash(password, hash) {
  * Main execution
  */
 async function main() {
-  console.log('🔐 IAModelHub Password Hash Generator\n');
+  console.log('🔐 AIModelHub Password Hash Generator\n');
 
   let password;
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 ###############################################################################
-# IAModelHub - Automated Deployment Script
+# AIModelHub - Automated Deployment Script
 # 
 # Deploys the reorganized CatalogModelIA_DS stack (backend + UI) from scratch.
 # Includes: Docker containers, database initialization, dependencies, and services.
@@ -19,15 +19,15 @@ NC='\033[0m' # No Color
 
 # Configuration
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-EXT_DIR="$PROJECT_DIR/IAModelHub_Extensiones"
-UI_DIR="$PROJECT_DIR/IAModelHub_EDCUI/ml-browser-app"
+EXT_DIR="$PROJECT_DIR/AIModelHub_Extensiones"
+UI_DIR="$PROJECT_DIR/AIModelHub_EDCUI/ml-browser-app"
 BACKEND_DIR="$EXT_DIR/backend"
 FRONTEND_DIR="$UI_DIR"
 DB_BACKUP="$EXT_DIR/database/full-backup.sql"
 DB_INIT="$EXT_DIR/database/init-database.sql"
 
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}🚀 IAModelHub - Automated Deployment${NC}"
+echo -e "${BLUE}🚀 AIModelHub - Automated Deployment${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 

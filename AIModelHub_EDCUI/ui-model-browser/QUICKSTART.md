@@ -4,7 +4,7 @@
 
 ### Option 1: Automatic script (recommended)
 ```bash
-cd /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app
+cd /home/edmundo/AIModelHub/AIModelHub_EDCUI/ml-browser-app
 ./start-application.sh
 ```
 The script:
@@ -17,21 +17,21 @@ The script:
 ### Option 2: Manual start
 ```bash
 # 1. Start Docker containers
-cd /home/edmundo/IAModelHub/IAModelHub_Extensiones
+cd /home/edmundo/AIModelHub/AIModelHub_Extensiones
 docker compose up -d postgres minio minio-setup
 
 # 2. Start backend
-cd /home/edmundo/IAModelHub/IAModelHub_Extensiones/backend
+cd /home/edmundo/AIModelHub/AIModelHub_Extensiones/backend
 node src/server-edc.js
 
 # 3. Start frontend (separate terminal)
-cd /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app
+cd /home/edmundo/AIModelHub/AIModelHub_EDCUI/ml-browser-app
 npm run start
 ```
 
 ## 🛑 Stop the application
 ```bash
-cd /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app
+cd /home/edmundo/AIModelHub/AIModelHub_EDCUI/ml-browser-app
 ./stop-application.sh
 ```
 
@@ -50,26 +50,26 @@ cd /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app
 1) Backend not running
 ```bash
 curl http://localhost:3000/health
-cd /home/edmundo/IAModelHub/IAModelHub_Extensiones/backend && node src/server-edc.js
+cd /home/edmundo/AIModelHub/AIModelHub_Extensiones/backend && node src/server-edc.js
 ```
 2) CORS misconfigured (already fixed: full CORS + OPTIONS handling).
 3) Browser cache: hard reload (Ctrl+Shift+R) or DevTools → Network → Disable cache.
 4) Frontend build errors
 ```bash
-tail -50 /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app/frontend.log
+tail -50 /home/edmundo/AIModelHub/AIModelHub_EDCUI/ml-browser-app/frontend.log
 ```
 
 ### Check service status
 ```bash
 ss -tlnp | grep -E "3000|4200|5432|9000"
 ps aux | grep node
-cd /home/edmundo/IAModelHub/IAModelHub_Extensiones && docker compose ps
+cd /home/edmundo/AIModelHub/AIModelHub_Extensiones && docker compose ps
 ```
 
 ### Live logs
 ```bash
-tail -f /home/edmundo/IAModelHub/IAModelHub_Extensiones/backend/server.log
-tail -f /home/edmundo/IAModelHub/IAModelHub_EDCUI/ml-browser-app/frontend.log
+tail -f /home/edmundo/AIModelHub/AIModelHub_Extensiones/backend/server.log
+tail -f /home/edmundo/AIModelHub/AIModelHub_EDCUI/ml-browser-app/frontend.log
 ```
 
 ## 📝 Key endpoints

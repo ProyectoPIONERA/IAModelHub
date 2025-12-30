@@ -1,5 +1,5 @@
 -- ============================================================
--- IAModelHub (CatalogModelIA_DS reorganization) - Database Initialization Script
+-- AIModelHub (CatalogModelIA_DS reorganization) - Database Initialization Script
 -- ============================================================
 -- Purpose: Initialize PostgreSQL database for IA Assets Catalog
 -- Database: ml_assets_db
@@ -327,4 +327,4 @@ ORDER BY table_name;
 -- END OF INITIALIZATION SCRIPT
 -- ============================================================
 
-COMMENT ON DATABASE ml_assets_db IS 'IA Assets Catalog Database for EDC Connector - IAModelHub Project';
+COMMENT ON DATABASE ml_assets_db IS 'IA Assets Catalog Database for EDC Connector - AIModelHub Project';

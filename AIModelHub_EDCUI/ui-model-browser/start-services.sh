@@ -4,7 +4,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-EXT_DIR="$PROJECT_ROOT/IAModelHub_Extensiones"
+EXT_DIR="$PROJECT_ROOT/AIModelHub_Extensiones"
 COMPOSE_FILE="$EXT_DIR/docker-compose.yml"
 
 echo "========================================="

@@ -15,7 +15,7 @@ SERVER_HOST = '0.0.0.0'  # Listen on all interfaces
 SERVER_PORT = 8080
 
 # Directory where models are stored
-MODEL_BASE_PATH = '/home/edmundo/IAModelHub/IAModelHub_Extensiones/model-server/models'
+MODEL_BASE_PATH = '/home/edmundo/AIModelHub/AIModelHub_Extensiones/model-server/models'
 
 # Simple authentication (API Key)
 API_KEY = 'ml-model-key-2024'  # Change to a secure value

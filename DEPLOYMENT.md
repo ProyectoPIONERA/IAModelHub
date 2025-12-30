@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide - IAModelHub
+# 🚀 Deployment Guide - AIModelHub
 
 Reorganization of `CatalogModelIA_DS` with separated logic and UI. This guide explains how to deploy the IA Assets Catalog with the new structure.
 
@@ -26,7 +26,7 @@ Recommended resources:
 
 ```bash
 # 1. Go to the project
-cd IAModelHub
+cd AIModelHub
 
 # 2. Run the deployment script
 ./deploy.sh   # Ensure you can use Docker (user in docker group or sudo)
@@ -51,7 +51,7 @@ Estimated time: 3-5 minutes
 ### Step 1: Enter the project
 
 ```bash
-cd IAModelHub
+cd AIModelHub
 ```
 
 ### Step 2: Start Docker infrastructure
@@ -82,7 +82,7 @@ docker run -d \
 **Option A: With sample data (recommended)**
 ```bash
 docker exec -i ml-assets-postgres psql -U ml_assets_user -d ml_assets_db \
-  < IAModelHub_Extensiones/database/full-backup.sql
+  < AIModelHub_Extensiones/database/full-backup.sql
 ```
 
 Includes:
@@ -93,7 +93,7 @@ Includes:
 **Option B: Schema only**
 ```bash
 docker exec -i ml-assets-postgres psql -U ml_assets_user -d ml_assets_db \
-  < IAModelHub_Extensiones/database/init-database.sql
+  < AIModelHub_Extensiones/database/init-database.sql
 ```
 
 ### Step 4: Configure MinIO
@@ -107,11 +107,11 @@ docker exec ml-assets-minio mkdir -p /data/ml-assets
 
 ```bash
 # Backend
-cd IAModelHub_Extensiones/backend
+cd AIModelHub_Extensiones/backend
 npm install
 
 # Frontend
-cd ../../IAModelHub_EDCUI/ml-browser-app
+cd ../../AIModelHub_EDCUI/ml-browser-app
 npm install
 ```
 
@@ -119,13 +119,13 @@ npm install
 
 **Terminal 1 - Backend:**
 ```bash
-cd IAModelHub_Extensiones/backend
+cd AIModelHub_Extensiones/backend
 node src/server-edc.js
 ```
 
 **Terminal 2 - Frontend:**
 ```bash
-cd IAModelHub_EDCUI/ml-browser-app
+cd AIModelHub_EDCUI/ml-browser-app
 npm run start
 ```
 
@@ -211,14 +211,14 @@ Open http://localhost:4200 in the browser. The application should load.
 ## 📦 Key File Structure
 
 ```
-IAModelHub/
+AIModelHub/
 ├── deploy.sh                           # Automated deployment script
-├── IAModelHub_Extensiones/
+├── AIModelHub_Extensiones/
 │   ├── backend/                        # EDC backend + API
 │   ├── database/                       # SQL scripts (init, backup)
 │   ├── docker-compose.yml              # Postgres + MinIO
 │   └── model-server/                   # Model HTTP server (Python)
-├── IAModelHub_EDCUI/
+├── AIModelHub_EDCUI/
 │   └── ml-browser-app/                 # Angular frontend
 │       ├── src/                        # Angular source
 │       └── package.json                # Frontend dependencies
@@ -302,7 +302,7 @@ docker logs ml-assets-postgres
 
 ```bash
 # Clean npm cache
-cd IAModelHub_EDCUI/ml-browser-app
+cd AIModelHub_EDCUI/ml-browser-app
 rm -rf node_modules package-lock.json
 npm install
 
@@ -314,7 +314,7 @@ node --version  # should be 18+
 
 ```bash
 # View logs
-cat IAModelHub_Extensiones/backend/server.log
+cat AIModelHub_Extensiones/backend/server.log
 
 # Check PostgreSQL is running
 docker ps | grep postgres

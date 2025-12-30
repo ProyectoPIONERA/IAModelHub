@@ -8,7 +8,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-EXT_DIR="$PROJECT_ROOT/IAModelHub_Extensiones"
+EXT_DIR="$PROJECT_ROOT/AIModelHub_Extensiones"
 BACKEND_DIR="$EXT_DIR/backend"
 COMPOSE_FILE="$EXT_DIR/docker-compose.yml"
 FRONTEND_DIR="$SCRIPT_DIR"

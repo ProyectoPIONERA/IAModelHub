@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import os
 
 # Output directory
-OUTPUT_DIR = '/home/edmundo/IAModelHub/IAModelHub_Extensiones/model-server/models'
+OUTPUT_DIR = '/home/edmundo/AIModelHub/AIModelHub_Extensiones/model-server/models'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 print("=" * 60)

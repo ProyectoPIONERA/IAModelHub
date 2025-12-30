@@ -1,6 +1,6 @@
 # Database Initialization
 
-Scripts to initialize the PostgreSQL database for IAModelHub (reorganized CatalogModelIA_DS).
+Scripts to initialize the PostgreSQL database for AIModelHub (reorganized CatalogModelIA_DS).
 
 ## 📋 Files
 - **`init-database.sql`**: Full initialization script (recommended).
